@@ -10,18 +10,28 @@
                         <div class="form__group">
                             <label class="form__label" for="formLogin">E-mail</label>
                             <div class="form__input-box">
-                                <input class="form__input" type="email" name="email" id="formLogin" placeholder="Type your email">
+                                <input
+                                class="form__input"
+                                type="email"
+                                name="email"
+                                id="formLogin"
+                                placeholder="Type your email">
                             </div>
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="formPassword">Password</label>
                             <div class="form__input-box">
-                                <input class="form__input" type="password" name="password" id="formPassword" placeholder="Type your password">
+                                <input
+                                class="form__input"
+                                type="password"
+                                name="password"
+                                id="formPassword"
+                                placeholder="Type your password">
                             </div>
                         </div>
                     </div>
                     <button class="btn btn--primary form__btn" type="submit">Login</button>
-                    <a href="{{ route('register') }}">Register</a>
+                    <a class="link-primary mt-2" href="{{ route('register') }}">Register</a>
                 </form>
             </div>
         </section>
