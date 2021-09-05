@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
-@import '~bootstrap/scss/bootstrap';
-
 @import 'variables';
 
 body {
@@ -37,18 +35,19 @@ body {
 // Login
 
 .login-page {
-    min-height: 100vh;
-    height: 100vh;
+    display: table;
+    margin: 0 auto;
 }
 
 .login {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .login__box {
+    max-width: 380px;
+    width: 100vw;
     padding: 40px;
     border-radius: 4px;
     background-color: $white;
@@ -60,7 +59,6 @@ body {
 .form {
     display: flex;
     flex-direction: column;
-    min-width: 300px;
 }
 
 .form__title {
