@@ -27,7 +27,8 @@
                                 type="password"
                                 name="password"
                                 id="formPassword"
-                                placeholder="Type your password">
+                                placeholder="Type your password"
+                                data-validate-field="password">
                             </div>
                         </div>
                     </div>
