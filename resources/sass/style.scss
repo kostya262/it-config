@@ -15,15 +15,25 @@ body {
     box-sizing: inherit;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .btn {
     min-width: 63px;
     min-height: 32px;
     padding: 10px 13px;
     border: 1px solid $light-gray;
     border-radius: 4px;
-    color: $text-color;
+    color: $text-color !important;
     background-color: $white;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08), inset 0px -1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  color: $text-color;
 }
 
 .btn--primary {
@@ -89,4 +99,69 @@ body {
 
 .form__btn {
     margin-top: 30px;
+}
+
+.js-validate-error-field {
+  color: $red !important;
+  border-color: currentColor !important;
+}
+
+.js-validate-error-label {
+  color: $red !important;
+  margin-top: 5px;
+}
+
+.js-validate-error-label::before {
+  content: url('/images/input-alert.svg');
+  display: inline-block;
+  transform: translateY(2px);
+  margin-right: 6px;
+}
+
+// Header
+
+.header {
+  background-color: $white;
+  padding: 10px 0;
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__sort-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.header__sort-text {
+  margin: 0;
+}
+
+.choices {
+  position: unset;
+}
+
+.choices__inner {
+  background: transparent;
+  border: 0;
+}
+
+.choices__list--dropdown {
+  left: 0;
+}
+
+.choices__item--choice {
+  padding: 10px !important;
+}
+
+.choices__item::after {
+  display: none;
+}
+
+.header__user-box {
+  display: flex;
+  align-items: center;
 }

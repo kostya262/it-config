@@ -12,15 +12,25 @@ body {
   box-sizing: inherit;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .btn {
   min-width: 63px;
   min-height: 32px;
   padding: 10px 13px;
   border: 1px solid #BABFC3;
   border-radius: 4px;
-  color: #202223;
+  color: #202223 !important;
   background-color: #FFFFFF;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08), inset 0px -1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  color: #202223;
 }
 
 .btn--primary {
@@ -83,4 +93,67 @@ body {
 
 .form__btn {
   margin-top: 30px;
+}
+
+.js-validate-error-field {
+  color: #D72C0D !important;
+  border-color: currentColor !important;
+}
+
+.js-validate-error-label {
+  color: #D72C0D !important;
+  margin-top: 5px;
+}
+
+.js-validate-error-label::before {
+  content: url("/images/input-alert.svg");
+  display: inline-block;
+  transform: translateY(2px);
+  margin-right: 6px;
+}
+
+.header {
+  background-color: #FFFFFF;
+  padding: 10px 0;
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__sort-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.header__sort-text {
+  margin: 0;
+}
+
+.choices {
+  position: unset;
+}
+
+.choices__inner {
+  background: transparent;
+  border: 0;
+}
+
+.choices__list--dropdown {
+  left: 0;
+}
+
+.choices__item--choice {
+  padding: 10px !important;
+}
+
+.choices__item::after {
+  display: none;
+}
+
+.header__user-box {
+  display: flex;
+  align-items: center;
 }
