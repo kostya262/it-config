@@ -15,7 +15,8 @@
                                 type="email"
                                 name="email"
                                 id="formLogin"
-                                placeholder="Type your email">
+                                placeholder="Type your email"
+                                data-validate-field="email">
                             </div>
                         </div>
                         <div class="form__group">

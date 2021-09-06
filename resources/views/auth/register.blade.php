@@ -9,56 +9,43 @@
                     <div class="form__inputs">
                         <div class="form__group">
                             <label class="form__label" for="formLogin">Username</label>
-                            <div class="form__input-box @error('name') form__input-box--invalid @enderror">
                               <input
                               class="form__input"
                               type="text"
                               name="name"
                               id="formLogin"
-                              placeholder="Type your username">
-                            </div>
-                            @error('name')
-                              <p class="form__input">{{ $message }}</p>
-                            @enderror
+                              placeholder="Type your username"
+                              data-validate-field="userName">
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="formEmail">E-mail</label>
-                            <div class="form__input-box @error('email') form__input-box--invalid @enderror">
                               <input
                               class="form__input"
                               type="email"
                               name="email"
                               id="formEmail"
-                              placeholder="Type your email">
-                            </div>
-                            @error('email')
-                              <p class="form__input">{{ $message }}</p>
-                            @enderror
+                              placeholder="Type your email"
+                              data-validate-field="email">
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="formPassword">Password</label>
-                            <div class="form__input-box @error('password') form__input-box--invalid @enderror">
                               <input
                               class="form__input"
                               type="password"
                               name="password"
                               id="formPassword"
-                              placeholder="Type your password">
-                            </div>
-                            @error('password')
-                              <p class="form__input">{{ $message }}</p>
-                            @enderror
+                              placeholder="Type your password"
+                              data-validate-field="password">
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="formPasswordRepeat">Password repeat</label>
-                            <div class="form__input-box">
                             <input
                             class="form__input"
                             type="password"
                             name="password_confirmation"
                             id="formPasswordRepeat"
-                            placeholder="Type your password again">
-                            </div>
+                            placeholder="Type your password again"
+                            data-validate-field="passwordRepeat">
                         </div>
                     </div>
                     <button class="btn btn--primary form__btn" type="submit">Registration</button>

@@ -77,16 +77,12 @@ body {
     line-height: 1;
 }
 
-.form__input-box {
-    border-radius: 4px;
-    padding: 1px;
-    background: linear-gradient($middle-gray, $light-gray);
-}
-
 .form__input {
     width: 100%;
     padding: 8px 12px;
-    border: none;
+    border: 1px solid transparent;
+    border-image: linear-gradient($middle-gray, $light-gray);
+    border-image-slice: 1;
     border-radius: 4px;
     background: $white;
 }

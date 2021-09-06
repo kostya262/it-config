@@ -10,7 +10,7 @@
     <title>IT GLOBAL TODOLIST</title>
 
     <!-- Scripts -->
-    {{-- <script src="https://cdn.jsdelivr.net/npm/just-validate@1.5.0/dist/js/just-validate.min.js" defer></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/just-validate@1.5.0/dist/js/just-validate.min.js" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Styles -->
