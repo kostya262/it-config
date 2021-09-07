@@ -82,11 +82,11 @@
       searchEnabled: false,
     });
   }
-  if ($(".header__user-box").length) {
-    let userAvatar = $('#headerUserAvatar');
-    let userName = $('#headerUserName').text().replace(/ {1,}/g,' ').trim().split(' ');
-    userAvatar.text(userName.length === 1 ?
-      userName[0][0]:
-      userName.length >= 2 ? userName[0][0]+''+userName[1][0]:'?');
-  }
+  // if ($(".header__user-box").length) {
+  //   let userAvatar = $('#headerUserAvatar');
+  //   let userName = $('#headerUserName').text().replace(/ {1,}/g,' ').trim().split(' ');
+  //   userAvatar.text(userName.length === 1 ?
+  //     userName[0][0]:
+  //     userName.length >= 2 ? userName[0][0]+''+userName[1][0]:'?');
+  // }
 })();
