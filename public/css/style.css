@@ -12,6 +12,12 @@ body {
   box-sizing: inherit;
 }
 
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -29,6 +35,7 @@ body {
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08), inset 0px -1px 0px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .btn--small {
@@ -196,5 +203,34 @@ body {
   align-items: center;
   border-radius: 100%;
   margin-right: 8px;
-  background-color: red;
+  border: 1px solid #202223;
+}
+
+.todo {
+  margin-top: 40px;
+}
+
+.todo__container {
+  max-width: 800px;
+}
+
+.task-card {
+  padding: 20px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  background: #FFFFFF;
+}
+
+.task-card__title {
+  margin: 0;
+  margin-top: 20px;
+}
+
+.task-card__description {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.task-card__management {
+  margin-top: 20px;
 }
