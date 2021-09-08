@@ -78,15 +78,28 @@
     });
   }
   if ($(".select").length) {
-    new Choices($(".select")[0], {
-      searchEnabled: false,
+    $('.select').each(function(index, el) {
+      new Choices(el, {
+        searchEnabled: false,
+      });
     });
   }
-  // if ($(".header__user-box").length) {
-  //   let userAvatar = $('#headerUserAvatar');
-  //   let userName = $('#headerUserName').text().replace(/ {1,}/g,' ').trim().split(' ');
-  //   userAvatar.text(userName.length === 1 ?
-  //     userName[0][0]:
-  //     userName.length >= 2 ? userName[0][0]+''+userName[1][0]:'?');
-  // }
+  // $('.create-task').magnificPopup({
+  //   type: 'inline',
+  //   preloader: false,
+  //   focus: '#name',
+
+  //   callbacks: {
+  //     beforeOpen: function() {
+  //       if($(window).width() < 700) {
+  //         this.st.focus = false;
+  //       } else {
+  //         this.st.focus = '#name';
+  //       }
+  //     }
+  //   }
+  // });
+  // $('#createTask').modal({
+  //   fadeDuration: 1000
+  // });
 })();

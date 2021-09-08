@@ -20,7 +20,7 @@ class CreateTasksTable extends Migration
             $table->json('workers');
             $table->date('deadline_at');
             $table->date('complete_at');
-            $table->enum('status', ['Добавлена', 'В работе', 'Завершена']);
+            $table->enum('status', ['Added', 'In work', 'Complete']);
         });
     }
 

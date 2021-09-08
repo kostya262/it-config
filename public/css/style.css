@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap);
 body {
+  min-width: 320px;
   font-size: 14px;
   font-family: Montserrat, sans-serif;
   color: #202223;
@@ -74,6 +75,7 @@ body {
 }
 
 .form__title {
+  margin-top: 0;
   margin-bottom: 30px;
   font-size: 26px;
   line-height: 1;
@@ -81,6 +83,16 @@ body {
 
 .form__group:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.form__date-picker {
+  margin-left: 40px;
+  margin-right: auto !important;
+}
+
+.form__inputs--line {
+  align-items: flex-end;
+  display: flex;
 }
 
 .form__label {
@@ -126,6 +138,16 @@ body {
   margin-right: 6px;
 }
 
+.jquery-modal {
+  padding: 20px 10px;
+}
+
+.modal {
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
 .header {
   background-color: #FFFFFF;
   padding: 10px 0;
@@ -158,15 +180,15 @@ body {
   margin: 0;
 }
 
-.choices {
+.header__sort-box .choices {
   position: unset;
 }
 
-.choices[data-type*=select-one] .choices__inner {
+.header__sort-box .choices[data-type*=select-one] .choices__inner {
   padding: 0;
 }
 
-.choices__inner {
+.header__sort-box .choices__inner {
   min-height: auto;
   padding-left: 2px;
   padding-right: 0;
@@ -175,7 +197,11 @@ body {
   background: transparent;
 }
 
-.choices__list--dropdown {
+.header__sort-box .choices__placeholder {
+  opacity: 1;
+}
+
+.header__sort-box .choices__list--dropdown {
   left: 0;
 }
 
@@ -187,7 +213,7 @@ body {
   display: none;
 }
 
-.choices[data-type*=select-one]:after {
+.header__sort-box .choices[data-type*=select-one]:after {
   right: 12.5px;
 }
 
@@ -201,8 +227,8 @@ body {
 }
 
 .user__avatar {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -211,12 +237,21 @@ body {
   border: 1px solid #202223;
 }
 
+.user__avatar--mini {
+  width: 32px;
+  height: 32px;
+}
+
 .todo {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .todo__container {
   max-width: 800px;
+}
+
+.todo__list {
+  position: relative;
 }
 
 .todo__item:not(:last-child) {
@@ -224,10 +259,46 @@ body {
 }
 
 .task-card {
+  position: relative;
   padding: 20px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   background: #FFFFFF;
+}
+
+.user-list__label {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.task-card__menu-btn {
+  display: inline-flex;
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  padding: 10px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.task-card__sphere {
+  display: inline-block;
+  margin: 0 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #5C5F62;
+}
+
+.task-card__menu-btn::before,
+.task-card__menu-btn::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #5C5F62;
 }
 
 .task-card__title {
@@ -249,10 +320,72 @@ body {
 }
 
 .task-card__input-box {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.task-card__input-box:first-child {
+.task-card__label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.task-card__input-box:not(:last-child) {
+  margin-right: 20px;
+}
+
+.task-card__select-box {
   margin-right: auto;
+}
+
+.task-card__select-box .choices__list--single {
+  padding: 0 70px 0 0;
+}
+
+.task-card__select-box .choices {
+  min-width: 178px;
+}
+
+.task-card__select-box .choices__inner {
+  min-height: 100%;
+  padding: 10px 12px !important;
+  border-radius: 5px;
+  border: 1px solid #A7ACB1;
+  background: #EEF5F9;
+}
+
+.task-card__input-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.form__date-picker::after {
+  position: unset;
+}
+
+.task-card__input-box::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  bottom: 1px;
+  right: 27px;
+  left: 1px;
+  padding-left: 12px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+}
+
+.task-card__input {
+  max-height: 38px;
+  min-width: 178px;
+  padding: 8px 4px 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #A7ACB1;
 }

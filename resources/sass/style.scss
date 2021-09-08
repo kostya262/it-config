@@ -3,16 +3,17 @@
 @import 'variables';
 
 body {
-    font-size: 14px;
-    font-family: Montserrat, sans-serif;
-    color: $text-color;
-    box-sizing: border-box;
-    background-color: $background-color;
+  min-width: 320px;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  color: $text-color;
+  box-sizing: border-box;
+  background-color: $background-color;
 }
 
 * {
-    color: inherit;
-    box-sizing: inherit;
+  color: inherit;
+  box-sizing: inherit;
 }
 
 .list-reset {
@@ -46,68 +47,81 @@ body {
 }
 
 .btn--primary {
-    border: none;
-    color: $white;
-    background-color: $light-primary;
+  border: none;
+  color: $white;
+  background-color: $light-primary;
 }
 
 // Login
 
 .login-page {
-    display: table;
-    margin: 0 auto;
+  display: table;
+  margin: 0 auto;
 }
 
 .login {
-    height: 100vh;
-    display: table-cell;
-    vertical-align: middle;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .login__box {
-    max-width: 380px;
-    width: 100vw;
-    padding: 40px;
-    border-radius: 4px;
-    background-color: $white;
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+  max-width: 380px;
+  width: 100vw;
+  padding: 40px;
+  border-radius: 4px;
+  background-color: $white;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
 }
 
 // Form
 
 .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__title {
-    margin-bottom: 30px;
-    font-size: 26px;
-    line-height: 1;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 26px;
+  line-height: 1;
 }
 
 .form__group:not(:last-child) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.form__date-picker {
+  margin-left: 40px;
+  margin-right: auto a !important;
+}
+
+.form__inputs--line {
+  align-items: flex-end;
+  display: flex;
 }
 
 .form__label {
-    display: block;
-    margin-bottom: 10px;
-    line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
 }
 
 .form__input {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid transparent;
-    border-image: linear-gradient($middle-gray, $light-gray);
-    border-image-slice: 1;
-    border-radius: 4px;
-    background: $white;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-image: linear-gradient($middle-gray, $light-gray);
+  border-image-slice: 1;
+  border-radius: 4px;
+  background: $white;
 }
 
+
+
 .form__btn {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .form__link {
@@ -130,6 +144,18 @@ body {
   display: inline-block;
   transform: translateY(2px);
   margin-right: 6px;
+}
+
+// Modal
+
+.jquery-modal {
+  padding: 20px 10px;
+}
+
+.modal {
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
 }
 
 // Header
@@ -166,15 +192,15 @@ body {
   margin: 0;
 }
 
-.choices {
+.header__sort-box .choices {
   position: unset;
 }
 
-.choices[data-type*=select-one] .choices__inner {
+.header__sort-box .choices[data-type*=select-one] .choices__inner {
   padding: 0;
 }
 
-.choices__inner {
+.header__sort-box .choices__inner {
   min-height: auto;
   padding-left: 2px;
   padding-right: 0;
@@ -183,7 +209,11 @@ body {
   background: transparent;
 }
 
-.choices__list--dropdown {
+.header__sort-box .choices__placeholder {
+  opacity: 1;
+}
+
+.header__sort-box .choices__list--dropdown {
   left: 0;
 }
 
@@ -195,7 +225,7 @@ body {
   display: none;
 }
 
-.choices[data-type*=select-one]:after {
+.header__sort-box .choices[data-type*=select-one]:after {
   right: 12.5px;
 }
 
@@ -211,8 +241,8 @@ body {
 }
 
 .user__avatar {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -221,14 +251,23 @@ body {
   border: 1px solid $text-color;
 }
 
+.user__avatar--mini {
+  width: 32px;
+  height: 32px;
+}
+
 // Todo
 
 .todo {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .todo__container {
   max-width: 800px;
+}
+
+.todo__list {
+  position: relative;
 }
 
 .todo__item:not(:last-child) {
@@ -238,10 +277,46 @@ body {
 // Task Card
 
 .task-card {
+  position: relative;
   padding: 20px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   background: #FFFFFF;
+}
+
+.user-list__label {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.task-card__menu-btn {
+  display: inline-flex;
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  padding: 10px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.task-card__sphere {
+  display: inline-block;
+  margin: 0 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #5C5F62;
+}
+
+.task-card__menu-btn::before,
+.task-card__menu-btn::after {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #5C5F62;
 }
 
 .task-card__title {
@@ -263,10 +338,70 @@ body {
 }
 
 .task-card__input-box {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.task-card__input-box:first-child {
+.task-card__label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.task-card__input-box:not(:last-child) {
+  margin-right: 20px;
+}
+
+.task-card__select-box {
   margin-right: auto;
+}
+
+.task-card__select-box .choices__list--single {
+  padding: 0 70px 0 0;
+}
+
+.task-card__select-box .choices {
+  min-width: 178px;
+}
+
+.task-card__select-box .choices__inner {
+  min-height: 100%;
+  padding: 10px 12px !important;
+  border-radius: 5px;
+  border: 1px solid $middle-gray;
+  background: #EEF5F9;
+}
+
+.task-card__input-box::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  right: 0; left: 0;
+  opacity: 0;
+}
+
+.form__date-picker::after {
+  position: unset;
+}
+
+.task-card__input-box::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  bottom: 1px;
+  right: 27px;
+  left: 1px;
+  padding-left: 12px;
+  border-radius: 5px;
+  background-color: $white;
+}
+
+.task-card__input {
+  max-height: 38px;
+  min-width: 178px;
+  padding: 8px 4px 8px 10px;
+  border-radius: 5px;
+  border: 1px solid $middle-gray;
 }
