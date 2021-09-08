@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <button class="btn btn--primary form__btn" type="submit">Login</button>
-                    <a class="link-primary mt-2" href="{{ route('register') }}">Register</a>
+                    <a class="form__link" href="{{ route('register') }}">Register</a>
                 </form>
             </div>
         </section>

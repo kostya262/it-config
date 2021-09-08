@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <button class="btn btn--primary form__btn" type="submit">Registration</button>
-                    <a class="link-primary mt-2" href="{{ route('login') }}">Login</a>
+                    <a class="form__link" href="{{ route('login') }}">Login</a>
                 </form>
             </div>
         </section>

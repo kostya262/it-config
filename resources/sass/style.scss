@@ -110,6 +110,11 @@ body {
     margin-top: 30px;
 }
 
+.form__link {
+  margin-top: 10px;
+  color: $light-primary;
+}
+
 .js-validate-error-field {
   color: $red !important;
   border-color: currentColor !important;
@@ -226,6 +231,10 @@ body {
   max-width: 800px;
 }
 
+.todo__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 // Task Card
 
 .task-card {
@@ -238,6 +247,8 @@ body {
 .task-card__title {
   margin: 0;
   margin-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .task-card__description {
@@ -247,4 +258,15 @@ body {
 
 .task-card__management {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.task-card__input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-card__input-box:first-child {
+  margin-right: auto;
 }

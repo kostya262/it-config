@@ -81,12 +81,20 @@
                 <h3 class="task-card__title">Lorem ipsum dolor sit amet.</h3>
                 <p class="task-card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati a itaque delectus omnis error dolores aut ullam maxime officia velit.</p>
                 <div class="task-card__management">
-                  <select name="taskStatus" id="taskStatus0" class="select task-card__select">
-                    <option value="">Добавлена</option>
-                  </select>
-                  <input type="date" name="dateStart" id="dateStart0">
-                  <label for="dateEnd0">—</label>
-                  <input type="date" name="dateEnd" id="dateEnd0">
+                  <div class="task-card__input-box">
+                    <label for="taskStatus0">Статус задачи</label>
+                    <select name="taskStatus" id="taskStatus0" class="select task-card__select">
+                      <option value="">Добавлена</option>
+                    </select>
+                  </div>
+                  <div class="task-card__input-box">
+                    <label for="dateStart0">Срок выполнения</label>
+                    <input type="date" name="dateStart" id="dateStart0">
+                  </div>
+                  <div class="task-card__input-box">
+                    <label for="dateEnd0">—Дата выполнения</label>
+                    <input type="date" name="dateEnd" id="dateEnd0">
+                  </div>
                 </div>
               </div>
             </div>
